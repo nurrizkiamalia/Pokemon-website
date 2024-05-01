@@ -14,6 +14,7 @@ const PokemonBox: React.FC<CardProps> = ({ name }) => {
     navigate(`/PokemonDetail/${name}`)
   }, [name, navigate])
 
+  if (!pokemonDetails) return <div></div>
   if (error) return <div>Something is wrong</div>
   
   return (
