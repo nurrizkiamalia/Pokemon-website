@@ -5,9 +5,8 @@ import usePokemonDetails from "../../hooks/usePokemonDetail";
 const PokemonDetail: React.FC = () => {
     const { name = "" } = useParams();
 
-    const { pokemonDetails, loading, error } = usePokemonDetails(name);
+    const { pokemonDetails, error } = usePokemonDetails(name);
   
-    if (loading) return <div className="text-white font-dmSans font-bold">Loading...</div>;
     if (error) return <div className="text-white font-dmSans font-bold">Something is wrong</div>;
     if (!name || !pokemonDetails) return <div className="text-white font-dmSans font-bold">Not Found</div>;
 

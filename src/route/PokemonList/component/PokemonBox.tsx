@@ -7,14 +7,13 @@ interface CardProps {
 }
 
 const PokemonBox: React.FC<CardProps> = ({ name }) => {
-  const { pokemonDetails, loading, error } = usePokemonDetails(name)
+  const { pokemonDetails, error } = usePokemonDetails(name)
   const navigate = useNavigate()
 
   const handleClickCard = useCallback(() => {
     navigate(`/PokemonDetail/${name}`)
   }, [name, navigate])
 
-  if (loading || !pokemonDetails) return <div>Loading...</div>
   if (error) return <div>Something is wrong</div>
   
   return (
