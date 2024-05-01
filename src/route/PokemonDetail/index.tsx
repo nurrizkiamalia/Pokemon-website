@@ -11,9 +11,9 @@ const PokemonDetail: React.FC = () => {
     if (!name || !pokemonDetails) return <div className="text-white font-dmSans font-bold">Not Found</div>;
 
     return (
-        <div className="h-full">
+        <div className="h-screen">
             <Navbar />
-                <div className="p-6 h-full">
+                <div className="p-6 h-[100%]">
                     <span className="text-lightBlue hover:scale-105">#1000</span>
                     <img src={pokemonDetails.artworkFront} alt="Pokemon" className="m-auto hover:scale-105 transition-transform " />
                     <div className="flex justify-between">
