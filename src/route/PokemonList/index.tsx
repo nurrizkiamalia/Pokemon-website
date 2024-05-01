@@ -12,9 +12,9 @@ const PokemonList: React.FC = () => {
             <Navbar />
             <div className="">
             {loading ? (
-        <div>Loading...</div>
+        <div className="text-white">Loading...</div>
       ) : (
-        <div className="grid grid-cols-2 gap-4 p-4">
+        <div className="bg-darkBlue grid grid-cols-2 gap-4 p-4">
           {pokemonList.map((each, index) => 
           <PokemonBox key={index} name={each.name} />)}
         </div>
