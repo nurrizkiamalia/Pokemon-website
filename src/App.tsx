@@ -7,7 +7,7 @@ function App() {
   // Example below
 
   return (
-    <div className='font-dmSans max-w-screen-sm m-auto p-0'>
+    <div className='font-dmSans max-w-screen-sm m-auto p-0 bg-darkBlue h-screen'>
       {/* Start the development here */}
       {/* Use react-router-dom Expected routes:  */}
       {/* 1. Home path: "/" */}

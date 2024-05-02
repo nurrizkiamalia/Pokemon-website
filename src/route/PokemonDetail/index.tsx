@@ -11,10 +11,12 @@ const PokemonDetail: React.FC = () => {
     if (!name || !pokemonDetails) return <div className="text-white font-dmSans font-bold">Not Found</div>;
 
     return (
-        <div className="bg-darkBlue h-screen">
+        <>
+        
+        <div className="bg-darkBlue">
             <Navbar />
-                <div className="p-6">
-                    <span className="text-lightBlue hover:scale-105">#1000</span>
+                <div className="p-6 ">
+                    <span className="text-lightBlue hover:scale-105 h-fit">#1000</span>
                     <img src={pokemonDetails.artworkFront} alt="Pokemon" className="m-auto hover:scale-105 transition-transform " />
                     <div className="flex justify-between">
                         <h2 className="text-white font-bold capitalize text-xlText hover:drop-shadow-2xl hover:scale-105 transition-all">{pokemonDetails.name}</h2>
@@ -40,6 +42,7 @@ const PokemonDetail: React.FC = () => {
                     </div>
                 </div>
         </div>
+        </>
     )
 }
 
